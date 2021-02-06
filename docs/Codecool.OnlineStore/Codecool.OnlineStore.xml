@@ -1,0 +1,451 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Codecool.OnlineStore</name>
+    </assembly>
+    <members>
+        <member name="T:Codecool.OnlineStore.Controllers.AdminController">
+            <summary>
+            Admin Controller
+            </summary>
+        </member>
+        <member name="T:Codecool.OnlineStore.Models.BasketItem">
+            <summary>
+            Basket item class
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.BasketItem.BasketItemId">
+            <summary>
+            Gets or sets basket's item id
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.BasketItem.CustomerId">
+            <summary>
+            Gets or sets customer's id
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.BasketItem.Customer">
+            <summary>
+            Gets or sets basket's item customer
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.BasketItem.ProductId">
+            <summary>
+            Gets or sets product's id
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.BasketItem.Product">
+            <summary>
+            Gets or sets basket's item product
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.BasketItem.Quantity">
+            <summary>
+            Gets or sets basket's item quantity
+            </summary>
+        </member>
+        <member name="T:Codecool.OnlineStore.Models.Category">
+            <summary>
+            Category class
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Category.CategoryId">
+            <summary>
+            Gets or sets category's id
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Category.Name">
+            <summary>
+            Gets or sets category's name
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Category.IsAvailable">
+            <summary>
+            Gets or sets a value indicating whether category's available
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Category.Products">
+            <summary>
+            Gets or sets category's products associated
+            </summary>
+        </member>
+        <member name="T:Codecool.OnlineStore.Models.Country">
+            <summary>
+            Country class
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Country.CountryId">
+            <summary>
+            Gets or sets country's id
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Country.CountryName">
+            <summary>
+            Gets or sets country's name
+            </summary>
+        </member>
+        <member name="T:Codecool.OnlineStore.Models.Customer">
+            <summary>
+            Customer class
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Customer.CustomerId">
+            <summary>
+            Gets or sets customer's id
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Customer.UserId">
+            <summary>
+            Gets or sets user's id
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Customer.User">
+            <summary>
+            Gets or sets customer's user
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Customer.FirstName">
+            <summary>
+            Gets or sets customer's first name
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Customer.LastName">
+            <summary>
+            Gets or sets customer's last name
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Customer.PhoneNumber">
+            <summary>
+            Gets or sets customer's phone number
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Customer.StreetName">
+            <summary>
+            Gets or sets customer's street name
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Customer.PostalCode">
+            <summary>
+            Gets or sets customer's postal code
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Customer.City">
+            <summary>
+            Gets or sets customer's city
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Customer.CountryId">
+            <summary>
+            Gets or sets country's id
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Customer.Country">
+            <summary>
+            Gets or sets customer's country
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Customer.IndividualDiscount">
+            <summary>
+            Gets or sets customer's individual discount
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Customer.Orders">
+            <summary>
+            Gets or sets customer's orders associated
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Customer.Basket">
+            <summary>
+            Gets or sets customer's basket associated
+            </summary>
+        </member>
+        <member name="T:Codecool.OnlineStore.Models.Discount">
+            <summary>
+            Discount class
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Discount.DiscountId">
+            <summary>
+            Gets or sets discount's id
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Discount.ProductId">
+            <summary>
+            Gets or sets product's id
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Discount.Product">
+            <summary>
+            Gets or sets discount's product
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Discount.Value">
+            <summary>
+            Gets or sets discount's value
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Discount.ExpirationDate">
+            <summary>
+            Gets or sets discount's expiration date
+            </summary>
+        </member>
+        <member name="T:Codecool.OnlineStore.Models.FeaturedCategory">
+            <summary>
+            Inheritor featured category  class
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.FeaturedCategory.ExpirationDate">
+            <summary>
+            Gets or sets featured's category expiration date
+            </summary>
+        </member>
+        <member name="T:Codecool.OnlineStore.Models.Order">
+            <summary>
+            Order class
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Order.OrderId">
+            <summary>
+            Gets or sets order's id
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Order.CustomerId">
+            <summary>
+            Gets or sets customer's id
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Order.Customer">
+            <summary>
+            Gets or sets order's customer
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Order.CreateDate">
+            <summary>
+            Gets or sets order's create date
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Order.PaymentDate">
+            <summary>
+            Gets or sets order's payment date
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Order.DeliveredDate">
+            <summary>
+            Gets or sets order's delivered date
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Order.OrderItems">
+            <summary>
+            Gets or sets order's item associated
+            </summary>
+        </member>
+        <member name="T:Codecool.OnlineStore.Models.OrderItem">
+            <summary>
+            Order item class
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.OrderItem.OrderItemId">
+            <summary>
+            Gets or sets order's item id
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.OrderItem.OrderId">
+            <summary>
+            Gets or sets order's id
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.OrderItem.Order">
+            <summary>
+            Gets or sets order's item order
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.OrderItem.ProductId">
+            <summary>
+            Gets or sets order's item product
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.OrderItem.Product">
+            <summary>
+            Gets or sets order's item product
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.OrderItem.Price">
+            <summary>
+            Gets or sets order's item price
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.OrderItem.Quantity">
+            <summary>
+            Gets or sets order's item quantity
+            </summary>
+        </member>
+        <member name="T:Codecool.OnlineStore.Models.OrderStatus">
+            <summary>
+            Represent order status as enum
+            </summary>
+        </member>
+        <member name="T:Codecool.OnlineStore.Models.Product">
+            <summary>
+            Product class
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Product.ProductId">
+            <summary>
+            Gets or sets product's id
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Product.Name">
+            <summary>
+            Gets or sets product's name
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Product.Price">
+            <summary>
+            Gets or sets product's price
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Product.Quantity">
+            <summary>
+            Gets or sets product's quantity
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Product.IsAvailable">
+            <summary>
+            Gets or sets a value indicating whether product's available
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Product.CategoryId">
+            <summary>
+            Gets or sets a categoryId
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Product.Category">
+            <summary>
+            Gets or sets product's category
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Product.DiscountId">
+            <summary>
+            Gets or sets a discountId
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Product.ActiveDiscount">
+            <summary>
+            Gets or sets product's active discount
+            </summary>
+        </member>
+        <member name="T:Codecool.OnlineStore.Models.Statistic">
+            <summary>
+            Statistic class
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Statistic.StatisticId">
+            <summary>
+            Gets or sets statistic's id
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Statistic.OrderId">
+            <summary>
+            Gets or sets order's id
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Statistic.Order">
+            <summary>
+            Gets or sets statistic's order
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Statistic.ProductId">
+            <summary>
+            Gets or sets statistic's product
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Statistic.Product">
+            <summary>
+            Gets or sets statistic's product
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Statistic.Rate">
+            <summary>
+            Gets or sets statistic's rate
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.Statistic.StatisticDate">
+            <summary>
+            Gets or sets statistic's date
+            </summary>
+        </member>
+        <member name="T:Codecool.OnlineStore.Models.User">
+            <summary>
+            User class
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.User.UserId">
+            <summary>
+            Gets or sets user's id
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.User.Username">
+            <summary>
+            Gets or sets user's username
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.User.Password">
+            <summary>
+            Gets or sets user's password
+            </summary>
+        </member>
+        <member name="P:Codecool.OnlineStore.Models.User.Role">
+            <summary>
+            Gets or sets user's role
+            </summary>
+        </member>
+        <member name="T:Codecool.OnlineStore.Models.UserRole">
+            <summary>
+            Represent user role as enum
+            </summary>
+        </member>
+        <member name="T:Codecool.OnlineStore.Program">
+            <summary>
+            This is the main class of your program which contains Main method
+            </summary>
+        </member>
+        <member name="M:Codecool.OnlineStore.Program.Main(System.String[])">
+            <summary>
+            This is the entry point of your program.
+            </summary>
+            <param name="args">Command line arguments.</param>
+        </member>
+        <member name="M:Codecool.OnlineStore.Views.ConsoleViews.UserInputSequenceView.LetherNumberMessage(System.Int32,System.Int32)">
+            <summary>
+            Console Message with parameters Min And Max Number Of characters
+            </summary>
+            <param name="min">Min Lenght</param>
+            <param name="max">Max Lenght</param>
+        </member>
+        <member name="M:Codecool.OnlineStore.Views.ConsoleViews.UserInputSequenceView.NumberValueMessage(System.Int32,System.Int32)">
+            <summary>
+            Console Message with parameters Min And Max Value Of Number
+            </summary>
+            <param name="min">Min Lenght</param>
+            <param name="max">Max Lenght</param>
+        </member>
+        <member name="M:Codecool.OnlineStore.Views.ValidateInput.OnlyNumberValid(System.Int32,System.Int32,System.String)">
+            <summary>
+            Numbers in corect Value Range
+            </summary>
+            <param name="minValue">Mmin value of input</param>
+            <param name="maxAValue">Max value of input</param>
+            <param name="input">User input for valid</param>
+            <returns>True or false</returns>
+        </member>
+        <member name="M:Codecool.OnlineStore.Views.ValidateInput.OnlyLetherValidSingleWord(System.Int32,System.Int32,System.String)">
+            <summary>
+            Lethers with corect Lenght
+            </summary>
+            <param name="minLenght">Minimal Lenght of String</param>
+            <param name="maxLenght">Maximal Lenght of String</param>
+            <param name="input">User Input </param>
+            <returns>True if valid, false if not</returns>
+        </member>
+    </members>
+</doc>
